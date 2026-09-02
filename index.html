@@ -125,6 +125,40 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
         }
+
+        /* =========================================
+   SCROLL HORIZONTAL TABEL REKAP
+   ========================================= */
+
+.recap-table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Lebar scrollbar */
+.recap-table-scroll::-webkit-scrollbar {
+    height: 10px;
+}
+
+/* Track scrollbar */
+.recap-table-scroll::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+
+/* Tombol yang digeser */
+.recap-table-scroll::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 10px;
+}
+
+/* Saat mouse diarahkan ke scrollbar */
+.recap-table-scroll::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+        
     </style>
 </head>
 <body class="text-slate-800 antialiased overflow-x-hidden selection:bg-indigo-100 selection:text-indigo-900">
@@ -441,8 +475,8 @@
                 </div>
                       
                         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="overflow-x-auto">
-                                <table class="w-full text-left border-collapse text-sm min-w-[800px]">
+                            <div class="recap-table-scroll">
+                                <table class="text-left border-collapse text-sm min-w-[1200px]">
                                     <thead>
                                         <tr class="bg-indigo-50 text-indigo-900 border-b-2 border-indigo-100">
                                             <th class="p-3 font-bold uppercase tracking-wider text-[11px] border-r border-indigo-100 w-32">No. SPK</th>
